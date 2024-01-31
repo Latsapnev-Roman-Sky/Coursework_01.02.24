@@ -15,11 +15,24 @@ public class Main {
             employees[9] = new Employee("Полина","Березина","Данииловна",5,127883);
 
             printAll(employees);
+            printSumSalaryInMonth(employees);
     }
+
     private static void printAll (Employee[] employees){ // Распечатать список всех сотрудников
         System.out.println("Список всех сотрудников:");
         for (Employee employee : employees){
             System.out.println(employee);
         }
+    }
+
+    private static int calculateSumSalaryInMonth (Employee[] employees) {
+        int sum = 0;
+        for (Employee employee : employees) {
+            sum = sum + employee.getSalary();
+        }
+        return sum;
+    }
+    private static void printSumSalaryInMonth(Employee[] employees) {
+        System.out.println("\nСумма затрат на зарплату для сотрудников в месяц - "+calculateSumSalaryInMonth(employees));
     }
 }
