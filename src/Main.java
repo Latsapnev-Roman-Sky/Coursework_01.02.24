@@ -16,6 +16,7 @@ public class Main {
 
             printAll(employees);
             printSumSalaryInMonth(employees);
+            printWithMinSalary(employees);
     }
 
     private static void printAll (Employee[] employees){ // Распечатать список всех сотрудников
@@ -34,5 +35,19 @@ public class Main {
     }
     private static void printSumSalaryInMonth(Employee[] employees) {
         System.out.println("\nСумма затрат на зарплату для сотрудников в месяц - "+calculateSumSalaryInMonth(employees));
+    }
+
+    private static void printWithMinSalary(Employee[] employees) {
+        Employee employeeWithMinSalary = employees[0];
+        for (Employee employee : employees) {
+            if (employeeWithMinSalary.getSalary() > employee.getSalary()) {
+                employeeWithMinSalary = employee;
+            }
+        }
+        for (Employee employee : employees){
+            if (employeeWithMinSalary.getSalary() == employee.getSalary()) {
+                System.out.println("\nCотрудник с наименьшей заработной платой: "+ employeeWithMinSalary);
+            }
+        }
     }
 }
