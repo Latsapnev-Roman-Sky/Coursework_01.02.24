@@ -13,5 +13,13 @@ public class Main {
             employees[7] = new Employee("Злата","Васильева","Викторовна",4,69921);
             employees[8] = new Employee("Марк","Алексеев","Ярославович",5,91000);
             employees[9] = new Employee("Полина","Березина","Данииловна",5,127883);
+
+            printAll(employees);
+    }
+    private static void printAll (Employee[] employees){ // Распечатать список всех сотрудников
+        System.out.println("Список всех сотрудников:");
+        for (Employee employee : employees){
+            System.out.println(employee);
+        }
     }
 }
