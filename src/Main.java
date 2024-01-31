@@ -18,6 +18,7 @@ public class Main {
             printSumSalaryInMonth(employees);
             printWithMinSalary(employees);
             printWithMaxSalary(employees);
+            printAverageSalary(employees);
     }
 
     private static void printAll (Employee[] employees){ // Распечатать список всех сотрудников
@@ -63,6 +64,17 @@ public class Main {
             if (employeeWithMaxSalary.getSalary() == employee.getSalary()) {
                 System.out.println("\nCотрудник с наибольшей заработной платой: "+ employeeWithMaxSalary);
             }
+        }
+    }
+
+    private static void printAverageSalary(Employee[] employees) {
+        int sum = calculateSumSalaryInMonth(employees);
+        int theNumberOfEmployees = 0;
+        for (Employee employee : employees) {
+            theNumberOfEmployees++;
+        }
+        if (theNumberOfEmployees != 0) {
+            System.out.println("\nСреднее значение зарплат в месяц: "+(float)sum/theNumberOfEmployees+" рублей");
         }
     }
 }
