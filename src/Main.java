@@ -19,6 +19,7 @@ public class Main {
             printWithMinSalary(employees);
             printWithMaxSalary(employees);
             printAverageSalary(employees);
+            printAllFullNameEmployees(employees);
     }
 
     private static void printAll (Employee[] employees){ // Распечатать список всех сотрудников
@@ -75,6 +76,13 @@ public class Main {
         }
         if (theNumberOfEmployees != 0) {
             System.out.println("\nСреднее значение зарплат в месяц: "+(float)sum/theNumberOfEmployees+" рублей");
+        }
+    }
+
+    private static void printAllFullNameEmployees(Employee[] employees) {
+        System.out.println("\nСписок ФИО всех сотрудников:");
+        for (Employee employee : employees) {
+            System.out.println(employee.getFirstName()+" "+employee.getSecondName()+" "+employee.getLastName());
         }
     }
 }
