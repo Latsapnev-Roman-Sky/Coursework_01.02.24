@@ -45,10 +45,16 @@ public class Main {
         for (Employee employee : employees) {
             if (employeeWithMinSalary.getSalary() > employee.getSalary()) {
                 employeeWithMinSalary = employee;
-                System.out.println("\nCотрудник с наименьшей заработной платой: " + employeeWithMinSalary);
+            }
+        }
+
+        for (Employee employee : employees) {
+            if (employeeWithMinSalary.getSalary() == employee.getSalary()) {
+                    System.out.println("\nCотрудник с наименьшей заработной платой: " + employeeWithMinSalary);
             }
         }
     }
+
 
     private static void printWithMaxSalary(Employee[] employees) {
         Employee employeeWithMaxSalary = employees[0];
@@ -67,7 +73,7 @@ public class Main {
     private static void printAverageSalary(Employee[] employees) {
         int sum = calculateSumSalaryInMonth(employees);
         int theNumberOfEmployees = 0;
-        for (Employee employee : employees) {
+        for (int e = 0; e < employees.length; e++) {
             theNumberOfEmployees++;
         }
         if (theNumberOfEmployees != 0) {
