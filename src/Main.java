@@ -45,7 +45,7 @@ public class Main {
         for (Employee employee : employees) {
             if (employeeWithMinSalary.getSalary() > employee.getSalary()) {
                 employeeWithMinSalary = employee;
-                System.out.println("\nCотрудник с наименьшей заработной платой: "+ employeeWithMinSalary);
+                System.out.println("\nCотрудник с наименьшей заработной платой: " + employeeWithMinSalary);
             }
         }
     }
