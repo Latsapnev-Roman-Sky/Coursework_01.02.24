@@ -32,7 +32,9 @@ public class Main {
     private static int calculateSumSalaryInMonth (Employee[] employees) {
         int sum = 0;
         for (Employee employee : employees) {
+            if (employee != null){
             sum = sum + employee.getSalary();
+            }
         }
         return sum;
     }
@@ -73,7 +75,7 @@ public class Main {
     private static void printAverageSalary(Employee[] employees) {
         int sum = calculateSumSalaryInMonth(employees);
         int theNumberOfEmployees = 0;
-        for (int e = 0; e < employees.length; e++) {
+        for (Employee employee : employees) {
             theNumberOfEmployees++;
         }
         if (theNumberOfEmployees != 0) {
